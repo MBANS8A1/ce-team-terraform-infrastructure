@@ -33,7 +33,7 @@ module "rds"{
   rds_instance_name = var.rds_instance_name
   instance_class = var.instance_class
   db_subnet_grp_name = var.db_subnet_grp_name
-
+  identifierName = var.identifierName
 }
 
 module "eks" {
@@ -59,7 +59,7 @@ resource "aws_ecrpublic_repository" "repoimages" {
   catalog_data {
     about_text        = "Contains docker images using maven and spring framework"
     description       = "Repository for Learner Management images"
-    operating_systems = ["Linux","Windows"]
+    operating_systems = ["Linux"]
     usage_text        = "Follow push commands to push up docker image into the repository"
   }
   tags = {

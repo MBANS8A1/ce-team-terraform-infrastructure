@@ -89,6 +89,11 @@ variable "instance_class" {
     description = "instance class"
 }
 
+variable "identifierName"{
+    type = string
+    description = "identifier name"
+} 
+
 variable "engine_version"{
     type = string
     description = "engine version"
@@ -130,3 +135,4 @@ variable "desired_size" {
   description = "Desired number of nodes in the node group"
   type        = number
 }
+

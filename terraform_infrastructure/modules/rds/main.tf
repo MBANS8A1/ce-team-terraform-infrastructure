@@ -8,6 +8,7 @@ data "aws_secretsmanager_secret_version" "secret-rds-version" {
   secret_id = data.aws_secretsmanager_secret.rds_secret[count.index].id
 }
 
+
 resource "aws_db_instance" "project-rds-ins" {
   allocated_storage    = var.allocated_storage
   db_name              = var.rds_instance_name
@@ -17,11 +18,13 @@ resource "aws_db_instance" "project-rds-ins" {
   instance_class       = var.instance_class
   username             = var.db_username
   password             = var.db_password
+  identifier           = var.identifierName
   # manage_master_user_password = var.use_secrets_manager
   # master_user_secret_kms_key_id = aws_kms_key.rds_group_key.key_id
   db_subnet_group_name = aws_db_subnet_group.rds_sub_grp.name
-  skip_final_snapshot  = true
   vpc_security_group_ids = var.security_group_ids
+
+
 }
 
 #   password             = var.db_password

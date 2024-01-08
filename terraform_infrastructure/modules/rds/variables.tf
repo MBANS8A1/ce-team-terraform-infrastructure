@@ -10,6 +10,7 @@ variable "db_username"{
    
 }
 
+
 variable "db_password"{
     type = string
     description = "Database password"
@@ -64,3 +65,8 @@ variable "db_subnet_grp_name" {
     description = "database subnett group name"
 
 }
+
+variable "identifierName"{
+    type = string
+    description = "identifier name"
+} 

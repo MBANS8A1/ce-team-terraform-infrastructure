@@ -14,13 +14,14 @@ connectivity_type = "public"
 db_subnet_grp_name = "rds-subnet-project-group"
 db_username =  "postgres"
 db_password = "passwordsix"
-rds_instance_name = "RDS_project_db_instance"
+rds_instance_name = "learnerdb"
 allocated_storage = 10
 instance_class = "db.t3.micro"
 engine_version = "14.7"
 engine = "postgres"
 secrets_list = ["USERNAME","PASSWORD"]
 use_secrets_manager = true
+identifierName = "learnerdb"
 
 
 cluster_name = "EKS-GROUP6-CLUSTER"
