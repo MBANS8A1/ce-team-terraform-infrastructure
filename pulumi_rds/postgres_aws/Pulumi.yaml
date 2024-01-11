@@ -1,0 +1,3 @@
+name: ce-team-aws-go-rds
+runtime: go
+description: infrastructure
