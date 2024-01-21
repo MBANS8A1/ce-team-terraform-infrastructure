@@ -1,2 +1,2 @@
-### Miscellaneous ignores
+### Miscellaneous ignores for AWS infrastructure in order to not exceed GitHub memory limit
 /terraform_infrastructure/.terraform
